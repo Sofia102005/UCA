@@ -1,0 +1,113 @@
+.header {
+  background-color: #093FB4; 
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+.Logo img {
+  width: 40px;  
+  height: 40px;
+  background-color: white; 
+  margin-right: 15px;
+}
+
+.title_uni {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.title_uni h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.title_uni p {
+  font-size: 14px;
+  margin: 0;
+  color: white;
+}
+
+.Select_income {
+  width: 250px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #3338A0; 
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(63, 81, 181, 0.5);
+  text-align: center;
+  background-color: white;
+}
+
+.Uni_income {
+  background-color: #3338A0; 
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.Title_income {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.Select_button {
+  margin: 15px 0;
+}
+
+.Select_title {
+  width: 180px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Select_title:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.03);
+}
+
+
+#Instructor .Select_title {
+  border: 1px solid #3338A0;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 20px 40px;
+  border-top: 1px solid #aaa;
+}
+
+.questions_title {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.questions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.title_group {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.answer {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+}
