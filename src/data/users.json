@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "password": "12345",
+    "email": "admin@chat.com",
+    "rol": "Admin",
+    "img": "https://i.pravatar.cc/150?img=1"
+  },
+  {
+    "id": 2,
+    "name": "Usuario",
+    "password": "abcd",
+    "email": "user@chat.com",
+    "rol": "estudiante",
+    "img": "https://i.pravatar.cc/150?img=2"
+  },
+  {
+    "id": 3,
+    "name": "monitor",
+    "password": "abcd",
+    "email": "user@chat.com",
+    "rol": "Monitor",
+    "img": "https://i.pravatar.cc/150?img=2"
+  }
+]

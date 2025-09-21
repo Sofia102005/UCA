@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+    <div class="login-container">
+         <header class="header">
+    <div class="Logo">
+      <img src="" alt="" id="Logo_UCA" />
+    </div>
+    <div class="title_uni">
+      <H1 clas="uca"> UCA </H1>
+      <p class="Uni_logo">Universidad Catolica Americana</p>
+  </header>
+
+        <form id="loginForm" class="login-form">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="btn-primary">Ingresar</button>
+        </form>
+
+        <p id="loginError" class="error"></p>
+    </div>
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>
