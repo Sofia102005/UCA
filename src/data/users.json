@@ -12,15 +12,23 @@
     "name": "Usuario",
     "password": "abcd",
     "email": "user@chat.com",
-    "rol": "estudiante",
+    "rol": "Estudiante",
     "img": "https://i.pravatar.cc/150?img=2"
   },
   {
     "id": 3,
-    "name": "monitor",
+    "name": "monitora",
     "password": "abcd",
     "email": "user@chat.com",
     "rol": "Monitor",
     "img": "https://i.pravatar.cc/150?img=2"
+  },
+  {
+    "id": 4,
+    "name": "monitor martin",
+    "password": "123",
+    "email": "sss@ddd.com",
+    "rol": "Monitor",
+    "img": "https://play-lh.googleusercontent.com/7Ac5TgaL15Ra4bvFVHJKCdJp4qvnL4djZj5bKc6RN-MZjzrvkeHbJytek0NPTSdZcp8"
   }
 ]

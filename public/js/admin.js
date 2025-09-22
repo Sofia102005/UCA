@@ -1,7 +1,12 @@
-import { getUsers, updateUser } from "./services/api.js";
+import { getUsers, updateUser, createUser } from "./services/api.js";
 
 const monitorContainer = document.getElementById("monitorContainer");
 const monitorModal = document.getElementById("monitorModal");
+const createUserModal = document.getElementById("createUserModal");
+
+  document.getElementById("openCreateModal").addEventListener("click", () => {
+    openCreateUserModal();
+  });
 
 async function loadMonitor() {
   try {
@@ -96,4 +101,69 @@ function openModal(user, imgSrc) {
   });
 }
 
+
+function openCreateUserModal() {
+
+  createUserModal.hidden = false;
+
+  createUserModal.innerHTML = `
+    <div class="modal-content">
+      <h2>Crear nuevo usuario</h2>
+
+      <label>Nombre:</label>
+      <input type="text" id="newName" placeholder="Nombre">
+
+      <label>Correo:</label>
+      <input type="email" id="newEmail" placeholder="Correo">
+
+      <label>Contraseña:</label>
+      <input type="password" id="newPassword" placeholder="Contraseña">
+
+      <label>Rol:</label>
+      <select id="newRol">
+        <option value="Monitor">Monitor</option>
+        <option value="admin">Admin</option>
+        <option value="user">Estudiante</option>
+      </select>
+
+      <label>URL Imagen:</label>
+      <input type="text" id="newImg" placeholder="http://...">
+
+      <button type="button" id="createSaveBtn">Crear</button>
+      <button type="button" id="createCloseBtn">Cerrar</button>
+    </div>
+  `;
+
+  // cerrar modal
+  document.getElementById("createCloseBtn").addEventListener("click", () => {
+    createUserModal.hidden = true;
+  });
+
+  // guardar usuario
+  document.getElementById("createSaveBtn").addEventListener("click", async () => {
+    const name = document.getElementById("newName").value.trim();
+    const email = document.getElementById("newEmail").value.trim();
+    const password = document.getElementById("newPassword").value.trim();
+    const rol = document.getElementById("newRol").value;
+    const img = document.getElementById("newImg").value.trim();
+
+    if (!name || !email || !password) {
+      alert("Por favor completa todos los campos obligatorios");
+      return;
+    }
+
+    try {
+      await createUser({ name, email, password, rol, img });
+      alert("Usuario creado correctamente");
+      createUserModal.hidden = true;
+      loadMonitor(); // recargar lista
+    } catch (err) {
+      console.error("Error creando usuario:", err);
+      alert("No se pudo crear el usuario");
+    }
+  });
+}
+
+
 document.addEventListener("DOMContentLoaded", loadMonitor);
+
