@@ -48,7 +48,6 @@ loginForm.addEventListener("submit", async function(e) {
         //     redirectToChat();
 
     } catch (err) {
-        console.error("Error de login:", err);
         showError(err.message || "Credenciales inválidas");
     }
 });

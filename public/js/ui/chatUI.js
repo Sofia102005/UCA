@@ -47,8 +47,6 @@ export function updateUserList(users) {
 export function showUserList(list, show) {
     if (show) {
         list.classList.add("active");
-    } else {
-        list.classList.remove("active");
     }
 }
 
