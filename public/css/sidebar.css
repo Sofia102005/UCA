@@ -1,8 +1,84 @@
+/* Chat container */
+.chat-container {
+    display: grid;
+    grid-template-columns: 280px 1fr; 
+    grid-template-rows: auto 1fr auto; 
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-background);
+    box-sizing: border-box;
+}
+
+/* Header ocupa todo el ancho arriba */
+.header {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+/* Sidebar fijo a la izquierda */
+.user-sidebar {
+    grid-column: 1;
+    grid-row: 2 / span 2; 
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-right: 1px solid var(--color-light-grey);
+    overflow-y: auto;
+}
+
+/* Chat principal */
+.chat-main {
+    grid-column: 2;
+    grid-row: 2;
+    overflow-y: auto;
+    padding: var(--spacing-lg);
+    background: var(--color-background);
+    box-sizing: border-box;
+}
+
+/* Input de mensajes */
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--color-white);
+    border-top: 1px solid var(--color-light-grey);
+    gap: var(--spacing-md);
+}
+
+/* Caja de texto */
+.chat-input input {
+    flex: 1;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-light-grey);
+    border-radius: 25px;
+    font-size: var(--font-size-md);
+    outline: none;
+}
+
+/* Botón enviar */
+.send-btn {
+    background: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.send-btn:hover {
+    background: var(--color-hover);
+}
 /* Sidebar de usuarios */
 .user-sidebar {
     width: 400px;
     float: left;
-    background-color: #7de4f1;
     height: 90vh;
     
 }
