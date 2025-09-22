@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingresar</title>
-  <link rel="stylesheet" href="/public/css/Styles.css">
+  <title>Ingresar - Selección de Rol</title>
+  <link rel="stylesheet" href="/public/css/Styles.css"> 
 </head>
 
 <body>
   <header class="header">
     <div class="Logo">
-      <img src="" alt="Logo UCA" id="Logo_UCA" />
+      <img src="/public/images/logo-uca.png" alt="Logo UCA" id="Logo_UCA" />  
     </div>
     <div class="title_uni">
       <h1 class="uca">UCA</h1>
@@ -25,25 +24,24 @@
     </div>
 
     <div id="Student" class="Select_button">
-      <a class="Select_title" href="./Frontend/Ingreso/income.html?rol=estudiante">Estudiante</a>
+      <a class="Select_title" href="./Frontend/public/login.html?rol=Estudiante">Estudiante</a> 
     </div>
 
     <div id="Instructor" class="Select_button">
-      <a class="Select_title" href="./Frontend/Ingreso/income.html?rol=monitor">Monitor</a>
+      <a class="Select_title" href="./Frontend/Public/login.html?rol=monitor">Monitor</a> 
     </div>
 
     <div id="Manager" class="Select_button">
-      <a class="Select_title" href="./Frontend/Ingreso/income.html?rol=admin">Administrador</a>
+      <a class="Select_title" href="./Frontend/Public/login.html?rol=admin">Administrador</a>  
     </div>
   </div>
 
   <footer>
-    <!-- Se debe corregir que si es en celular este sea en una burbuja y se despliege como pestaña emergente tambien.-->
-    <div class="questions_button">
-      <!-- El botón para toggle se genera dinámicamente con JS -->
+    <div class="questions_button" id="toggleQuestions">  
+      <button id="questionsBtn">? FAQ</button>  
     </div>
 
-    <div class="questions">
+    <div class="questions" id="questionsContent"> 
       <h1 class="questions_title">Preguntas Frecuentes</h1>
 
       <div class="Questions_group">
@@ -76,9 +74,6 @@
     </div>
   </footer>
 
- <script type="module" src="./js/login.js"></script>
-  
+  <script type="module" src="./js/select-role.js"></script>  
 </body>
-
-
 </html>
