@@ -128,3 +128,19 @@
     .send-btn:hover {
         background: var(--color-hover);
     }
+
+    .icon-btn {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    right: 100%;
+}
+
+    .icon-btn:hover {
+        opacity: 0.8;
+    }
+
+    
