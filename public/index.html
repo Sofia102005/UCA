@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingresar - Selección de Rol</title>
-  <link rel="stylesheet" href="/public/css/Styles.css"> 
+  <link rel="stylesheet" href="./css/Styles.css">
 </head>
 
 <body>
   <header class="header">
     <div class="Logo">
-      <img src="/public/images/logo-uca.png" alt="Logo UCA" id="Logo_UCA" />  
+      <img src="/public/images/logo-uca.png" alt="Logo UCA" id="Logo_UCA" />
     </div>
+
     <div class="title_uni">
       <h1 class="uca">UCA</h1>
       <p class="Uni_logo">Universidad Catolica Americana</p>
     </div>
   </header>
 
+
   <div class="Select_income">
-    <div class="Uni_income">
-      <p class="Title_income">Universidad Catolica Americana</p>
-    </div>
+    <p class="Title_income">Universidad Catolica Americana</p>
 
-    <div id="Student" class="Select_button">
-      <a class="Select_title" href="./Frontend/public/login.html?rol=Estudiante">Estudiante</a> 
-    </div>
+    <div class="income_rol">
+      <div id="Student" class="Select_button">
+        <a class="Select_title" href="login.html">Estudiante</a>
+      </div>
 
-    <div id="Instructor" class="Select_button">
-      <a class="Select_title" href="./Frontend/Public/login.html?rol=monitor">Monitor</a> 
-    </div>
+      <div id="Instructor" class="Select_button">
+        <a class="Select_title" href="login.html">Monitor</a>
+      </div>
 
-    <div id="Manager" class="Select_button">
-      <a class="Select_title" href="./Frontend/Public/login.html?rol=admin">Administrador</a>  
+      <div id="Manager" class="Select_button">
+        <a class="Select_title" href="login.html">Administrador</a>
+      </div>
     </div>
   </div>
 
   <footer>
-    <div class="questions_button" id="toggleQuestions">  
-      <button id="questionsBtn">? FAQ</button>  
-    </div>
-
-    <div class="questions" id="questionsContent"> 
+    <div class="questions" id="questionsContent">
       <h1 class="questions_title">Preguntas Frecuentes</h1>
 
-      <div class="Questions_group">
-        <h2 class="title_group">
-          ¿Cómo ingreso como estudiante, monitor o administrador?
-        </h2>
-        <p class="answer">
-          Seleccione el botón correspondiente en la pantalla de inicio e introduzca sus credenciales
-        </p>
-      </div>
+      <div class="questions_list">
+        <div class="Questions_group">
+          <h2 class="title_group">
+            ¿Cómo ingreso como estudiante, monitor o administrador?
+          </h2>
+          <p class="answer">
+            Seleccione el botón correspondiente en la pantalla de inicio e introduzca sus credenciales
+          </p>
+        </div>
 
-      <div class="Questions_group">
-        <h2 class="title_group">
-          ¿Puedo cambiar mi rol después de iniciar sesión?
-        </h2>
-        <p class="answer">
-          Debe cerrar sesión y volver a entrar seleccionando el rol correcto
-        </p>
-      </div>
+        <div class="Questions_group">
+          <h2 class="title_group">
+            ¿Puedo cambiar mi rol después de iniciar sesión?
+          </h2>
+          <p class="answer">
+            Debe cerrar sesión y volver a entrar seleccionando el rol correcto
+          </p>
+        </div>
 
-      <div class="Questions_group">
-        <h2 class="title_group">
-          ¿A quién puedo acudir si sigo teniendo problemas?
-        </h2>
-        <p class="answer">
-          Contacte con el área de soporte técnico de la universidad.
-          Tel. 313 33 33 333
-        </p>
+        <div class="Questions_group">
+          <h2 class="title_group">
+            ¿A quién puedo acudir si sigo teniendo problemas?
+          </h2>
+          <p class="answer">
+            Contacte con el área de soporte técnico de la universidad.<br>
+            Tel. 313 33 33 333
+          </p>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="./js/select-role.js"></script>  
+
+  <script type="module" src="./js/select-role.js"></script>
 </body>
+
 </html>
