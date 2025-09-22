@@ -57,5 +57,5 @@ export function clearUser () {
 }
 
 export function redirectToLogin() {
-    window.location.href = "../Frontend/Ingreso/income.html";
+    window.location.href = "./login.html";
 }
