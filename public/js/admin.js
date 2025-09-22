@@ -1,3 +1,4 @@
+
 import { getUsers, updateUser, createUser } from "./services/api.js";
 
 const monitorContainer = document.getElementById("monitorContainer");

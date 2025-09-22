@@ -52,10 +52,10 @@ export function showUserList(list, show) {
     }
 }
 
-export function clearUser() {
-    localStorage.removeItem("username");
+export function clearUser () {
+    localStorage.removeItem("user");
 }
 
 export function redirectToLogin() {
-    window.location.href = "/login.html";
+    window.location.href = "../Frontend/Ingreso/income.html";
 }

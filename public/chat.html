@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-       <div id="userSidebar" class="user-sidebar">
+    <div id="userSidebar" class="user-sidebar">
         <div class="sidebar-header">
             <h3>Usuarios conectados</h3>
+            <button id="closeSidebar" class="close-btn"><i class="fa-solid fa-times"></i></button>
         </div>
         <ul id="userList">
             <!-- usuarios dinámicos -->
@@ -37,9 +38,6 @@
             <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
         </form>
     </div>
-
-    <!-- Sidebar de usuarios -->
- 
 
     <script type="module" src="./js/chat.js"></script>
 </body>

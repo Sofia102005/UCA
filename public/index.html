@@ -4,18 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema de Chat - UCA</title>
-  <link rel="stylesheet" href="css/Styles.css">
+  <title>Ingresar</title>
+  <link rel="stylesheet" href="/public/css/Styles.css">
 </head>
 
 <body>
   <header class="header">
     <div class="Logo">
-      <img src="" alt="" id="Logo_UCA" />
+      <img src="" alt="Logo UCA" id="Logo_UCA" />
     </div>
     <div class="title_uni">
-      <H1 clas="uca"> UCA </H1>
+      <h1 class="uca">UCA</h1>
       <p class="Uni_logo">Universidad Catolica Americana</p>
+    </div>
   </header>
 
   <div class="Select_income">
@@ -24,22 +25,22 @@
     </div>
 
     <div id="Student" class="Select_button">
-       <li><a href="login.html">Estudiante</a></li>
-      <button  href="login.html"> Estudiante </button>
+      <a class="Select_title" href="./Frontend/Ingreso/income.html?rol=estudiante">Estudiante</a>
     </div>
 
     <div id="Instructor" class="Select_button">
-      <button  href="login.html"> Monitor </button>
+      <a class="Select_title" href="./Frontend/Ingreso/income.html?rol=monitor">Monitor</a>
     </div>
 
     <div id="Manager" class="Select_button">
-      <button href="login.html"> Administrador </button>
+      <a class="Select_title" href="./Frontend/Ingreso/income.html?rol=admin">Administrador</a>
     </div>
   </div>
 
   <footer>
+    <!-- Se debe corregir que si es en celular este sea en una burbuja y se despliege como pestaña emergente tambien.-->
     <div class="questions_button">
-
+      <!-- El botón para toggle se genera dinámicamente con JS -->
     </div>
 
     <div class="questions">
@@ -53,7 +54,7 @@
           Seleccione el botón correspondiente en la pantalla de inicio e introduzca sus credenciales
         </p>
       </div>
-      
+
       <div class="Questions_group">
         <h2 class="title_group">
           ¿Puedo cambiar mi rol después de iniciar sesión?
@@ -63,7 +64,7 @@
         </p>
       </div>
 
-       <div class="Questions_group">
+      <div class="Questions_group">
         <h2 class="title_group">
           ¿A quién puedo acudir si sigo teniendo problemas?
         </h2>
@@ -72,11 +73,12 @@
           Tel. 313 33 33 333
         </p>
       </div>
-
     </div>
-
   </footer>
 
+ <script type="module" src="./js/login.js"></script>
+  
 </body>
+
 
 </html>
