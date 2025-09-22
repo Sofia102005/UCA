@@ -47,8 +47,6 @@ export function updateUserList(users) {
 export function showUserList(list, show) {
     if (show) {
         list.classList.add("active");
-    } else {
-        list.classList.remove("active");
     }
 }
 
@@ -57,5 +55,5 @@ export function clearUser () {
 }
 
 export function redirectToLogin() {
-    window.location.href = "../Frontend/Ingreso/income.html";
+    window.location.href = "./login.html";
 }
