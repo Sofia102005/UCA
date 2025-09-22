@@ -26,7 +26,9 @@ export function addSystemMessage(text) {
 
 export function updateUserList(users) {
     userList.innerHTML = "";
-    users.forEach(u => {
+    const moniEst = users.filter(u => u.rol && u.rol.toLowerCase() === 'monitor' || u.rol.toLowerCase() === 'estudiante');
+
+    moniEst.forEach(u => {
         const li = document.createElement("li");
         li.classList.add("user-item");
 
