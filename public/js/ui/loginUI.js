@@ -33,8 +33,3 @@ export function redirectToAdmin() {
     window.location.href = "/admin.html";  
     
 }
-
-
-export function redirectToMonitor() {
-    window.location.href = "/monitor.html";  
-}

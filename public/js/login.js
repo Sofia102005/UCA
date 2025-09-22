@@ -19,33 +19,22 @@ loginForm.addEventListener("submit", async function(e) {
         if (!username || !password) {
             showError("Debes ingresar usuario y contraseña");
             return;
-        }else {
+        }
             // Llamar backend
             const data = await login(username, password);
 
             // Guardar y redirigir
             saveUser(data.user);
-            redirectToChat();
-        }
+            
 
            
         
-        if (usernameAdmin === 'Admin') {
-            // Llamar backend
-            const data = await login(usernameAdmin, password);
-
-            // Guardar y redirigir
-            saveUser(data.user);
+        if (username === usernameAdmin) {
             redirectToAdmin();
+        } else {
+            redirectToChat();
         }
 
-
-        //   // Llamar backend
-        //     const data = await login(username, password);
-
-        //     // Guardar y redirigir
-        //     saveUser(data.user);
-        //     redirectToChat();
 
     } catch (err) {
         showError(err.message || "Credenciales inválidas");

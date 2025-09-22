@@ -10,7 +10,7 @@ const createUserModal = document.getElementById("createUserModal");
   });
 
 async function loadMonitor() {
-  try {
+  try { 
     const data = await getUsers();
     const users = Array.isArray(data) ? data : Object.values(data);
 
