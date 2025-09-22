@@ -9,10 +9,26 @@
 </head>
 <body>
 
+    <header class="header">
+            <div class="Logo">
+                <img src="/public/images/logo-uca.png" alt="Logo UCA" id="Logo_UCA" />
+            </div>
+
+            <div class="title_uni">
+                <h1 class="uca">UCA</h1>
+                <p class="Uni_logo">Universidad Catolica Americana</p>
+
+                <div class="header-actions">
+                    <button id="logoutBtn" class="icon-btn"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+
+            </div>
+        </header>
+
     <div id="monitorContainer" class="monitor-grid"></div>
 
     <!-- Modal oculto de editar el monitor -->
-    <div id="monitorModal" class="monitorModal" hidden></div>
+    <div id="monitorModal" class="Modal" hidden></div>
 
     <!-- Botón para abrir modal de crear monitor -->
     <button id="openCreateModal">Agregar usuario</button>

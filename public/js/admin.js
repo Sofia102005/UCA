@@ -57,6 +57,7 @@ function openModal(user, imgSrc) {
 
   monitorModal.innerHTML = `
     <div class="modal-content">
+    <h2>Editar Monitor</h2>
       <img src="${imgSrc}" alt="${user.name}" class="user-img"> 
       
       <label>Nombre:</label>
