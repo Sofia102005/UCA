@@ -5,7 +5,6 @@ import { showUserList, clearUser, redirectToLogin } from "./ui/chatUI.js";
 const user = JSON.parse(localStorage.getItem("user"));
 if (!user) redirectToLogin();
 
-document.getElementById("chat-username").textContent = "Bienvenido " + user.name;
 
 // Sidebar y controles
 const chatForm = document.getElementById("chatForm");
