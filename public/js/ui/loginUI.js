@@ -23,22 +23,18 @@ export function clearError() {
 
 export function saveUser (user) {
     localStorage.setItem("user", JSON.stringify(user));
-    console.log('Usuario guardado en localStorage:', user);  // Log para verificar en consola
 }
 
 export function redirectToChat() {
-    console.log('Redirigiendo a chat (estudiante/monitor)...');
     window.location.href = "/chat.html";  
 }
 
 export function redirectToAdmin() {
-    console.log('Redirigiendo a admin...');
     window.location.href = "/admin.html";  
     
 }
 
 
 export function redirectToMonitor() {
-    console.log('Redirigiendo a monitor...');
     window.location.href = "/monitor.html";  
 }
