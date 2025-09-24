@@ -10,8 +10,10 @@ fixChatHeight();
 // Movil
 
 const chatMain = document.getElementById("chatMain");
+const chatForm = document.getElementById("chatForm");
 const backToUsers = document.getElementById("backToUsers");
 const chatUserName = document.getElementById("chatUserName");
+const chatheadermobile = document.getElementById("chat-header-mobile");
 const sidebar = document.getElementById("userSidebar");
 
 
@@ -54,6 +56,7 @@ export function updateUserList(users) {
         // mostrar chat en móvil
         chatUserName.textContent = "Chat";
         chatMain.classList.add("active");
+        chatForm.classList.add("active");
         sidebar.classList.add("hide");
     });
         userList.appendChild(li);
@@ -63,6 +66,7 @@ export function updateUserList(users) {
 // botón atrás
 backToUsers.addEventListener("click", () => {
   chatMain.classList.remove("active");
+  chatForm.classList.remove("active");
   sidebar.classList.remove("hide");
 });
 

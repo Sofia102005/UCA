@@ -350,4 +350,20 @@ footer {
   }
 }
 
+/* --- BOTÓN ICONO HEADER --- */
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+}
+.icon-btn:hover {
+  opacity: 0.8;
+}
 

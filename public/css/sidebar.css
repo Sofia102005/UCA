@@ -179,33 +179,3 @@
     }
 }
 
-
-/* Modo móvil: una sola vista */
-@media (max-width: 600px ) {
-
-  /* lista usuarios */
-    .user-sidebar {
-        width: 100vw;
-        height: 100vh;
-        background: white;
-        z-index: 10;
-        transition: transform 0.3s ease;
-        transform: translateX(0);
-  }
-
-  /* chat  */
-    .chat-main {
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        background: white;
-        transition: transform 0.3s ease;
-        transform: translateX(100%);
-  }
-  
-
-
-
-}
-
-
