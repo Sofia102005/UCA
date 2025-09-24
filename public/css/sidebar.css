@@ -1,6 +1,6 @@
 /* Chat container */
 :root {
-  --chat-input-height: 72px; /* modificar si la barra mide más/menos */
+  --chat-input-height: 72px; 
 }
 
 .chat-container {
