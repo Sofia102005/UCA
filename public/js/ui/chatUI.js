@@ -13,7 +13,6 @@ const chatMain = document.getElementById("chatMain");
 const chatForm = document.getElementById("chatForm");
 const backToUsers = document.getElementById("backToUsers");
 const chatUserName = document.getElementById("chatUserName");
-const chatheadermobile = document.getElementById("chat-header-mobile");
 const sidebar = document.getElementById("userSidebar");
 
 
@@ -81,5 +80,5 @@ export function clearUser () {
 }
 
 export function redirectToLogin() {
-    window.location.href = "./login.html";
+    window.location.href = "./index.html";
 }
