@@ -73,8 +73,10 @@ function openModal(user, imgSrc) {
         <option value="user" ${user.rol === 'estudiante' ? 'selected' : ''}>User</option>
       </select>
       
+      <div class="modal-buttons">
       <button type="button" id="saveButton">Guardar</button>
       <button type="button" id="closeButton">Cerrar</button>
+      </div>
     </div>`
   ;
 
@@ -131,8 +133,10 @@ function openCreateUserModal() {
       <label>URL Imagen:</label>
       <input type="text" id="newImg" placeholder="http://...">
 
+      <div class="modal-buttons">
       <button type="button" id="createSaveBtn">Crear</button>
       <button type="button" id="createCloseBtn">Cerrar</button>
+      </div>
     </div>
   `;
 

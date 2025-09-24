@@ -186,45 +186,53 @@ h2.page-title {
   border-color: #0044cc;
   box-shadow: 0 0 4px rgba(0,68,204,0.3);
 }
+/* --- ESTILO GENERAL DE BOTONES --- */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
 
-/* --- BOTONES GENERALES --- */
-#createSaveBtn,
-#createCloseBtn {
-  padding: 10px;
+.modal-buttons button {
+  padding: 10px 20px;
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
   font-weight: bold;
   border: none;
-  width: 48%; 
+  min-width: 120px; /* todos del mismo ancho */
+  color: #fff;
+  transition: background 0.2s ease;
 }
 
-/* Botón Crear */
+/* --- CREAR --- */
 #createSaveBtn {
   background-color: #2f4eb1;
-  color: #fff;
 }
 #createSaveBtn:hover {
   background-color: #1b2f78;
 }
 
-/* Botón Cerrar */
-#createCloseBtn {
-  background-color: #999;
-  color: #fff;
+/* --- GUARDAR --- */
+#saveButton {
+  background-color: #2f4eb1;
 }
-#createCloseBtn:hover {
+#saveButton:hover {
+  background-color: #1b2f78;
+}
+
+/* --- CERRAR (para ambos casos) --- */
+#createCloseBtn,
+#closeButton {
+  background-color: #999;
+}
+#createCloseBtn:hover,
+#closeButton:hover {
   background-color: #221a1a;
 }
 
-/* --- BOTONES EN FILA --- */
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-  width: 100%;
-}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 600px) {
