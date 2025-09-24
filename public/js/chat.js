@@ -10,7 +10,7 @@ document.getElementById("chat-username").textContent = user.name;
 // Sidebar y controles
 const chatForm = document.getElementById("chatForm");
 const messageInput = document.getElementById("messageInput");
-const logoutBtn = document.getElementById("logoutBtn");
+const logout = document.getElementById("btn-primary");
 const sidebar = document.getElementById("userSidebar");
 const toggleBtn = document.getElementById("usersToggle");
 const closeBtn = document.getElementById("closeSidebar");
@@ -29,7 +29,7 @@ chatForm.addEventListener("submit", function(e) {
     }
 });
 
-logoutBtn.addEventListener("click", function() {
+logout.addEventListener("click", function() {
     clearUser();
     redirectToLogin();
 });

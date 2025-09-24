@@ -1,9 +1,19 @@
 
 import { getUsers, updateUser, createUser } from "./services/api.js";
+import { clearUser, redirectToLogin} from "./ui/adminUI.js";
+
 
 const monitorContainer = document.getElementById("monitorContainer");
 const monitorModal = document.getElementById("monitorModal");
 const createUserModal = document.getElementById("createUserModal");
+const logout = document.getElementById("btn-primary");
+
+// Verificar usuario
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (!user) redirectToLogin();
+
+
+
 
 document.getElementById("openCreateModal").addEventListener("click", () => {
   openCreateUserModal();
@@ -176,6 +186,10 @@ function openCreateUserModal() {
   });
 }
 
+logout.addEventListener("click", function() {
+    clearUser();
+    redirectToLogin();
+});
 
 document.addEventListener("DOMContentLoaded", loadMonitor);
 
