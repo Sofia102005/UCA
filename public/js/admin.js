@@ -5,12 +5,12 @@ const monitorContainer = document.getElementById("monitorContainer");
 const monitorModal = document.getElementById("monitorModal");
 const createUserModal = document.getElementById("createUserModal");
 
-  document.getElementById("openCreateModal").addEventListener("click", () => {
-    openCreateUserModal();
-  });
+document.getElementById("openCreateModal").addEventListener("click", () => {
+  openCreateUserModal();
+});
 
 async function loadMonitor() {
-  try { 
+  try {
     const data = await getUsers();
     const users = Array.isArray(data) ? data : Object.values(data);
 
@@ -56,6 +56,7 @@ function openModal(user, imgSrc) {
   monitorModal.hidden = false;
 
   monitorModal.innerHTML = `
+    <div class="modal" id="editModal">
     <div class="modal-content">
     <h2>Editar Monitor</h2>
       <img src="${imgSrc}" alt="${user.name}" class="user-img"> 
@@ -70,15 +71,18 @@ function openModal(user, imgSrc) {
       <select id="rolSelect">
         <option value="Monitor" ${user.rol === 'Monitor' ? 'selected' : ''}>Monitor</option>
         <option value="admin" ${user.rol === 'admin' ? 'selected' : ''}>Admin</option>
-        <option value="user" ${user.rol === 'estudiante' ? 'selected' : ''}>User</option>
+        <option value="user" ${user.rol === 'estudiante' ? 'selected' : ''}>Estudiante</option>
       </select>
       
       <div class="modal-buttons">
-      <button type="button" id="saveButton">Guardar</button>
       <button type="button" id="closeButton">Cerrar</button>
+      <button type="button" id="saveButton">Guardar</button>
+      
       </div>
+    </div>
     </div>`
-  ;
+
+    ;
 
   document.getElementById("closeButton").addEventListener("click", () => {
     monitorModal.hidden = true;
@@ -134,8 +138,10 @@ function openCreateUserModal() {
       <input type="text" id="newImg" placeholder="http://...">
 
       <div class="modal-buttons">
-      <button type="button" id="createSaveBtn">Crear</button>
+
       <button type="button" id="createCloseBtn">Cerrar</button>
+      <button type="button" id="createSaveBtn">Crear</button>
+      
       </div>
     </div>
   `;

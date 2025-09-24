@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "monitora",
+    "name": "Maria",
     "password": "abcd",
     "email": "user@chat.com",
     "rol": "Monitor",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "name": "Rosa",
+    "name": "Rosalba",
     "password": "abcd",
     "email": "Rosa@blabla.com",
     "rol": "Monitor",
