@@ -20,41 +20,43 @@
 
             <div class="title_uni">
                 <h1 class="uca">UCA</h1>
-                <p class="Uni_logo" >Universidad Catolica Americana</p>
+                <p class="Uni_logo">Universidad Catolica Americana</p>
             </div>
             <div class="header-actions">
-            <a href="index.html" class="btn-primary">Cerrar Sesion</a>
+                <a href="index.html" class="btn-primary">Cerrar Sesion</a>
             </div>
         </header>
+        
         <div id="userSidebar" class="user-sidebar">
             <div class="sidebar-header" id="chat-username">
             </div>
-             <div class="sidebar-header">
+            <div class="sidebar-header">
                 <h3>Usuarios conectados</h3>
             </div>
             <ul id="userList">
                 <!-- usuarios dinámicos -->
             </ul>
         </div>
-
+        
         <main class="chat-main" id="chatMain">
             <div class="chat-header-mobile">
                 <button id="backToUsers" class="back-btn">←</button>
                 <span id="chatUserName">Nombre del usuario</span>
             </div>
-            <div id="messages" class="messages"></div>
-            
+            <div id="messages" class="messages">
+            </div>
+
         </main>
-        
+
         <form id="chatForm" class="chat-input">
             <input type="text" id="messageInput" placeholder="Escribe un mensaje..." autocomplete="off" required />
             <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
         </form>
 
 
-  
 
-    
+
+
     </div>
 
     <script type="module" src="./js/chat.js"></script>
