@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/chat.css" />
     <link rel="stylesheet" href="./css/Styles.css">
     <link rel="stylesheet" href="./css/sidebar.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -38,7 +37,11 @@
             </ul>
         </div>
 
-        <main class="chat-main">
+        <main class="chat-main" id="chatMain">
+            <div class="chat-header-mobile">
+                <button id="backToUsers" class="back-btn">←</button>
+                <span id="chatUserName">Nombre del usuario</span>
+            </div>
             <div id="messages" class="messages"></div>
         </main>
 
@@ -46,6 +49,10 @@
             <input type="text" id="messageInput" placeholder="Escribe un mensaje..." autocomplete="off" required />
             <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
         </form>
+
+  
+
+    
     </div>
 
     <script type="module" src="./js/chat.js"></script>

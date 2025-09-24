@@ -15,6 +15,7 @@ const sidebar = document.getElementById("userSidebar");
 const toggleBtn = document.getElementById("usersToggle");
 const closeBtn = document.getElementById("closeSidebar");
 
+
 // Conectar al WebSocket
 connect(user);
 

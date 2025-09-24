@@ -7,6 +7,14 @@ function fixChatHeight() {
 window.addEventListener("resize", fixChatHeight);
 fixChatHeight();
 
+// Movil
+
+const chatMain = document.getElementById("chatMain");
+const backToUsers = document.getElementById("backToUsers");
+const chatUserName = document.getElementById("chatUserName");
+const sidebar = document.getElementById("userSidebar");
+
+
 export function addMessage(user, text, isSelf = false) {
     const msgEl = document.createElement("div");
     msgEl.classList.add("message");
@@ -42,9 +50,21 @@ export function updateUserList(users) {
                 <small class="user-role">${u.rol}</small>
             </div>
         `;
+        li.addEventListener("click", () => {
+        // mostrar chat en móvil
+        chatUserName.textContent = "Chat";
+        chatMain.classList.add("active");
+        sidebar.classList.add("hide");
+    });
         userList.appendChild(li);
     });
 }
+
+// botón atrás
+backToUsers.addEventListener("click", () => {
+  chatMain.classList.remove("active");
+  sidebar.classList.remove("hide");
+});
 
 export function showUserList(list, show) {
     if (show) {
