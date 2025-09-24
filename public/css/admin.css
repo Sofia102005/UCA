@@ -202,7 +202,7 @@ h2.page-title {
   cursor: pointer;
   font-weight: bold;
   border: none;
-  min-width: 120px; /* todos del mismo ancho */
+  min-width: 120px; 
   color: #fff;
   transition: background 0.2s ease;
 }
@@ -215,7 +215,7 @@ h2.page-title {
   background-color: #1b2f78;
 }
 
-/* --- GUARDAR --- */
+
 #saveButton {
   background-color: #2f4eb1;
 }
@@ -223,7 +223,6 @@ h2.page-title {
   background-color: #1b2f78;
 }
 
-/* --- CERRAR (para ambos casos) --- */
 #createCloseBtn,
 #closeButton {
   background-color: #999;
