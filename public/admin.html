@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,22 @@
     <link rel="stylesheet" href="css/Styles.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
-
     <header class="header">
-            <div class="Logo">
-                <img src="/public/images/logo-uca.png" alt="Logo UCA" id="Logo_UCA" />
-            </div>
+        <div class="Logo">
+            <img src="/public/images/logo-uca.png" alt="Logo UCA" id="Logo_UCA" />
+        </div>
 
-            <div class="title_uni">
-                <h1 class="uca">UCA</h1>
-                <p class="Uni_logo">Universidad Catolica Americana</p>
+        <div class="title_uni">
+            <h1 class="uca">UCA</h1>
+            <p class="Uni_logo">Universidad Catolica Americana</p>
+        </div>
 
-                <div class="header-actions">
-                    <button id="logoutBtn" class="icon-btn"><i class="fa-solid fa-right-from-bracket"></i></button>
-                </div>
-            </div>
-        </header>
+        <div class="header-actions">
+            <a href="index.html" class="btn-primary">Inicio</a>
+        </div>
+    </header>
 
     <div id="monitorContainer" class="monitor-grid"></div>
 
@@ -30,13 +31,14 @@
     <div id="monitorModal" class="Modal" hidden></div>
 
     <!-- Botón para abrir modal de crear monitor -->
-    <button id="openCreateModal">Agregar usuario</button>
+    <button id="openCreateModal"></button>
 
     <!-- Modal oculto de crear monitor -->
     <div id="createUserModal" class="modal" hidden></div>
 
-  
+
 
     <script type="module" src="./js/admin.js"></script>
 </body>
+
 </html>

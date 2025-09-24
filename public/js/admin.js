@@ -75,8 +75,8 @@ function openModal(user, imgSrc) {
       
       <button type="button" id="saveButton">Guardar</button>
       <button type="button" id="closeButton">Cerrar</button>
-    </div>
-  `;
+    </div>`
+  ;
 
   document.getElementById("closeButton").addEventListener("click", () => {
     monitorModal.hidden = true;

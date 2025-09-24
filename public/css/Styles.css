@@ -58,7 +58,7 @@ body {
   background-color: var(--color-primary); 
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+   justify-content: flex-start;
   padding: 16px 30px;
   color: var(--color-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -103,6 +103,26 @@ body {
     font-size: 14px;
     margin: 0;
     color: var(--color-white);
+}
+
+.btn-home {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--color-white); 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-home:hover {
+  background: linear-gradient(135deg, var(--color-hover), var(--color-secondary));
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* === MAIN CONTENT CONTAINERS === */
