@@ -22,7 +22,10 @@ export function addMessage(user, text, isSelf = false) {
     if (isSelf) msgEl.classList.add("self");
     msgEl.innerHTML = `<strong>${user}: </strong>${text}`;
     messagesDiv.appendChild(msgEl);
+     
+    requestAnimationFrame(() => {
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  });
 }
 
 export function addSystemMessage(text) {
@@ -31,6 +34,10 @@ export function addSystemMessage(text) {
     msgEl.innerHTML = `<em>⚙️ ${text}</em>`;
     messagesDiv.appendChild(msgEl);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    
+    requestAnimationFrame(() => {
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  });
 }
 
 export function updateUserList(users) {
