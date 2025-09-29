@@ -80,8 +80,8 @@ function openModal(user, imgSrc) {
       <label>Rol:</label>
       <select id="rolSelect">
         <option value="Monitor" ${user.rol === 'Monitor' ? 'selected' : ''}>Monitor</option>
-        <option value="admin" ${user.rol === 'admin' ? 'selected' : ''}>Admin</option>
-        <option value="user" ${user.rol === 'estudiante' ? 'selected' : ''}>Estudiante</option>
+        <option value="admin" ${user.rol === 'Admin' ? 'selected' : ''}>Admin</option>
+        <option value="user" ${user.rol === 'Estudiante' ? 'selected' : ''}>Estudiante</option>
       </select>
       
       <div class="modal-buttons">
@@ -140,8 +140,8 @@ function openCreateUserModal() {
       <label>Rol:</label>
       <select id="newRol">
         <option value="Monitor">Monitor</option>
-        <option value="admin">Admin</option>
-        <option value="user">Estudiante</option>
+        <option value="Admin">Admin</option>
+        <option value="Estudiante">Estudiante</option>
       </select>
 
       <label>URL Imagen:</label>
