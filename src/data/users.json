@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "name": "Usuario",
+    "name": "pepito perez",
     "password": "abcd",
     "email": "user@chat.com",
     "rol": "Estudiante",
@@ -38,5 +38,21 @@
     "email": "Rosa@blabla.com",
     "rol": "Monitor",
     "img": "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+  },
+   {
+    "id": 6,
+    "name": "juan",
+    "password": "abcd",
+    "email": "user@chat.com",
+    "rol": "Estudiante",
+    "img": "https://i.pravatar.cc/150?img=2"
+  },
+  {
+    "id": 6,
+    "name": "kirby",
+    "password": "kirby",
+    "email": "user@chat.com",
+    "rol": "Estudiante",
+    "img": "https://www.nintenderos.com/wp-content/uploads/2022/03/Featured-Kirby-and-the-Forgotten-Land-Surprised.jpg"
   }
 ]
