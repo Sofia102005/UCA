@@ -264,6 +264,8 @@ footer {
     background-color: var(--color-white);
     border-top: 1px solid var(--color-light-grey);
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    background-color: #093FB4;
+
 }
 
 /* Contenedor */
@@ -278,8 +280,9 @@ footer {
     font-size: 18px;
     color: var(--color-grey);
     margin: 0;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
+    color: #e2e4e7;
 }
 
 /* Grilla de preguntas */
@@ -287,6 +290,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+        color: #e2e4e7;
+
 }
 
 /* Grupo de pregunta */
@@ -295,18 +300,20 @@ footer {
     border-left: none;
 }
 
+
 /* Pregunta */
 .title_group {
     font-size: 15px;
     margin: 0 0 8px 0;
-    color: var(--color-black);
     font-weight: bold;
+    color: #e2e4e7;
+
 }
 
 /* Respuesta */
 .answer {
     font-size: 13px;
-    color: var(--color-grey);
+     color: #e2e4e7;
     line-height: 1.5;
     margin: 0;
 }

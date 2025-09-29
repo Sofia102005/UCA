@@ -110,20 +110,22 @@
   font-size: var(--font-size-md);
 }
 
-.send-btn {
-  margin-left: var(--spacing-md);
-  background: var(--color-primary);
-  border: none;
-  border-radius: 50%;
-  color: white;
-  width: 45px;
-  height: 45px;
-  font-size: var(--font-size-lg);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+    .send-btn {
+        margin-left: var(--spacing-md);
+        background: var(--color-primary);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        width: 45px;
+        height: 45px;
+        font-size: var(--font-size-lg);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 .send-btn:hover {
   background: var(--color-hover);
