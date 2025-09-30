@@ -42,7 +42,7 @@ export function addMessage(user, text, isSelf = false, to = null) {
 export function addSystemMessage(text) {
   const msgEl = document.createElement("div");
   msgEl.classList.add("message", "system");
-  msgEl.innerHTML = `<em>⚙️ ${text}</em>`;
+  msgEl.innerHTML = `<em></em>`;
   if (messagesDiv) messagesDiv.appendChild(msgEl);
   requestAnimationFrame(() => {
     if (messagesDiv) messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -50,6 +50,7 @@ export function addSystemMessage(text) {
 }
 
 function renderMessages(other) {
+  
   if (!messagesDiv) return;
   messagesDiv.innerHTML = "";
   const list = chats[other] || [];
@@ -122,7 +123,7 @@ function openChat(user) {
   // mostrar chat (en móvil oculta sidebar)
   if (chatMain) chatMain.classList.add("active");
   if (chatForm) chatForm.classList.add("active");
-  if (sidebar) sidebar.classList.add("hide");
+  if (sidebar) sidebar.classList.remove("hide");
 
   renderMessages(user.name);
 }
@@ -135,6 +136,9 @@ if (backToUsers) {
     if (sidebar) sidebar.classList.remove("hide");
     if (chatMain) chatMain.classList.remove("active");
     if (chatForm) chatForm.classList.remove("active");
+
+    messagesDiv.innerHTML = "";
+
 
   });
 }

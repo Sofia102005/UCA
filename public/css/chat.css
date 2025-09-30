@@ -177,6 +177,9 @@
     overflow: hidden;
   }
 
+.chat-header{
+  display: none;
+}
   /* header móvil */
   .chat-header-mobile {
     display: flex;

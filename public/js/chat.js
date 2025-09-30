@@ -33,7 +33,7 @@ if (chatForm) {
     sendMessage(user.name, message, selectedUser.name);
 
     // mostrar localmente (lo recibirá también si el servidor reenvía al remitente, pero esto evita retraso visual)
-    addMessage(user.name, message, true, selectedUser.name);
+    addMessage(user.name, message, true, selectedUser.name);  
 
     messageInput.value = "";
   });
