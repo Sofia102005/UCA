@@ -28,7 +28,7 @@
     "name": "monitor martin",
     "password": "123",
     "email": "sss@ddd.com",
-    "rol": "Monitor",
+    "rol": "user",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Charli_D%27Amelio_3.jpg/960px-Charli_D%27Amelio_3.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Rosalba",
     "password": "abcd",
     "email": "Rosa@blabla.com",
-    "rol": "Monitor",
+    "rol": "admin",
     "img": "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
   },
   {
@@ -44,11 +44,11 @@
     "name": "juan",
     "password": "abcd",
     "email": "user@chat.com",
-    "rol": "Estudiante",
+    "rol": "Monitor",
     "img": "https://i.pravatar.cc/150?img=2"
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "kirby",
     "password": "kirby",
     "email": "user@chat.com",
@@ -56,27 +56,11 @@
     "img": "https://www.nintenderos.com/wp-content/uploads/2022/03/Featured-Kirby-and-the-Forgotten-Land-Surprised.jpg"
   },
   {
-    "id": 7,
-    "name": "Olivia Perez",
-    "password": "abcd",
-    "email": "Olivia@universidad.com",
-    "rol": "user",
-    "img": "https://i.pinimg.com/736x/ce/f6/17/cef617cc01b886d71468865382502c31.jpg"
-  },
-  {
     "id": 8,
-    "name": "kirby",
-    "password": "birby",
-    "email": "kirby@kirby.com",
-    "rol": "user",
-    "img": "https://www.nintenderos.com/wp-content/uploads/2022/03/Featured-Kirby-and-the-Forgotten-Land-Surprised.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Olivia Perez",
-    "password": "123",
-    "email": "olivia@olivia.com",
-    "rol": "user",
-    "img": "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+    "name": "Martin",
+    "password": "abcd",
+    "email": "Martin@correo.com",
+    "rol": "Estudiante",
+    "img": "https://i.pinimg.com/736x/09/8b/4f/098b4f30569bdc772e68eda75d22ed1a.jpg"
   }
 ]

@@ -29,12 +29,15 @@
   border-right: 1px solid var(--color-light-grey);
   overflow-y: auto;
   margin-top: 0;
-  /* sin huecos */
   padding-top: 0;
 }
 
 /* Chat principal */
+
 .chat-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   grid-column: 2;
   grid-row: 2;
   overflow-y: auto;
@@ -44,20 +47,20 @@
   padding-top: 60px;
 }
 
+
 .chat-input {
-  grid-column: 2;
-  grid-row: 3;
   display: flex;
-  padding: var(--spacing-md);
-  background: var(--color-white);
-  border-top: 1px solid var(--color-light-grey);
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ddd;
 }
 
 
 .messages {
-  display: flex;
-  flex-direction: column;
+  flex: 1;
   overflow-y: auto;
+  padding: 10px;
 }
 
 .message {
@@ -92,15 +95,6 @@
   max-width: 100%;
 }
 
-.chat-input {
-  position: sticky;
-  bottom: 0;
-  z-index: 100;
-  display: flex;
-  padding: var(--spacing-md);
-  background: #fff;
-  border-top: 1px solid #ddd;
-}
 
 .chat-input input {
   flex: 1;
@@ -141,6 +135,16 @@
   padding: var(--spacing-md);
 
 }
+
+.chat-header {
+  align-items: center;
+  padding: 10px;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-light-grey);
+  gap: 10px;
+}
+
+
 
 .messages {
   display: flex;
@@ -230,7 +234,6 @@
     transform: translateX(0);
   }
 
-  /* lista de usuarios */
 
   /* lista de usuarios */
   .user-sidebar {

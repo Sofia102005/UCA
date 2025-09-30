@@ -1,43 +1,63 @@
+// js/chat.js
 import { connect, sendMessage } from "./web/chatSocket.js";
-import { showUserList, clearUser, redirectToLogin } from "./ui/chatUI.js";
+import { getSelectedUser, addMessage, clearUser, redirectToLogin } from "./ui/chatUI.js";
 
 // Verificar usuario
 const user = JSON.parse(localStorage.getItem("user"));
 if (!user) redirectToLogin();
 
-document.getElementById("chat-username").textContent = user.name;
+// Mostrar nombre en la sidebar (si existe)
+const chatUsernameEl = document.getElementById("chat-username");
+if (chatUsernameEl) chatUsernameEl.textContent = user.name;
 
-// Sidebar y controles
+// Referencias DOM
 const chatForm = document.getElementById("chatForm");
 const messageInput = document.getElementById("messageInput");
-const logout = document.getElementById("btn-primary");
+const logout = document.getElementById("logoutBtn");
 const sidebar = document.getElementById("userSidebar");
 const toggleBtn = document.getElementById("usersToggle");
 const closeBtn = document.getElementById("closeSidebar");
 
-
 // Conectar al WebSocket
 connect(user);
 
-// Eventos
-chatForm.addEventListener("submit", function(e) {
+// Enviar mensaje (form)
+if (chatForm) {
+  chatForm.addEventListener("submit", e => {
     e.preventDefault();
-    const text = messageInput.value.trim();
-    if (text) {
-        sendMessage(user.name, text);
-        messageInput.value = "";
-    }
-});
+    const message = messageInput.value.trim();
+    const selectedUser = getSelectedUser();
+    if (!message || !selectedUser) return alert("Selecciona un usuario y escribe un mensaje");
 
-logout.addEventListener("click", function() {
+    // enviar al servidor: user.name (remitente), text, to (destinatario por nombre)
+    sendMessage(user.name, message, selectedUser.name);
+
+    // mostrar localmente (lo recibirá también si el servidor reenvía al remitente, pero esto evita retraso visual)
+    addMessage(user.name, message, true, selectedUser.name);
+
+    messageInput.value = "";
+  });
+}
+
+// Cerrar sesión
+if (logout) {
+  logout.addEventListener("click", function (ev) {
+    ev.preventDefault();
     clearUser();
     redirectToLogin();
-});
+  });
+}
 
-toggleBtn.addEventListener("click", () => {
-    showUserList(sidebar, true);
-});
-
-closeBtn.addEventListener("click", () => {
-    showUserList(sidebar, false);
-});
+// Si existen botones toggle (opcional)
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    // abre sidebar
+    sidebar && sidebar.classList.remove("hide");
+  });
+}
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    // cierra sidebar
+    sidebar && sidebar.classList.add("hide");
+  });
+}
