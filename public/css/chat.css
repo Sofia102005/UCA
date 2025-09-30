@@ -41,7 +41,7 @@
   grid-column: 2;
   grid-row: 2;
   overflow-y: auto;
-  padding: var(--spacing-lg);
+  padding: 1px;
   background: var(--color-background);
   box-sizing: border-box;
   padding-top: 60px;
@@ -144,6 +144,13 @@
   gap: 10px;
 }
 
+#chatHeader {
+  display: none; /* oculto por defecto */
+}
+
+#chatHeader.active {
+  display: flex; /* o block, depende del diseño que uses */
+}
 
 
 .messages {
@@ -164,62 +171,83 @@
 }
 
 @media (max-width: 600px) {
-  .chat-header-mobile {
-    display: block;
+  /* Ocultar por defecto chat y header */
+  .chat-main, .chat-form, #chatHeader {
+    display: none;
   }
-
-  .chat-container {
-    display: block;
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-.chat-header{
-  display: none;
-}
-  /* header móvil */
-  .chat-header-mobile {
+  #chatHeader.active {
+    width: 100%;
     display: flex;
     align-items: center;
+    padding: 10px;
     background: var(--color-primary);
-    color: white;
-    padding: 12px;
-    flex-shrink: 0;
-
-    position: sticky;
-    top: 0;
-    z-index: 200;
+    color: #fff;
+    box-sizing: border-box;
+  }
+    .chat-main.active {
+    grid-column: 1 / span 2;
+    width: 100%;
+    padding: 1px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+    .chat-form.active {
+    width: 100%;
+    grid-column: 1 / span 2;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+   .chat-input {
+    width: 100%;
   }
 
-  .chat-header-mobile::before {
-    content: "";
+  .chat-main.active, .chat-form.active, #chatHeader.active {
+    display: flex;
+  }
+
+  /* --- CONTENEDOR --- */
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* --- LISTA DE USUARIOS --- */
+  .user-sidebar {
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-primary);
-    z-index: -1;
-
-
+    background: white;
+    z-index: 10;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
   }
 
+  /* Ocultar lista cuando entras al chat */
+  .user-sidebar.hide {
+    transform: translateX(-100%);
+  }
+
+  /* --- CHAT --- */
   .chat-main {
     flex: 1;
     overflow-y: auto;
     padding: 10px;
     transition: transform 0.3s ease;
-    transform: translateX(100%);
+    transform: translateX(100%); /* fuera de pantalla */
   }
 
   .chat-main.active {
-    transform: translateX(0);
+    transform: translateX(0); /* visible */
   }
 
-
+  /* --- INPUT MENSAJES --- */
   .chat-input {
     position: sticky;
     bottom: 0;
@@ -237,24 +265,14 @@
     transform: translateX(0);
   }
 
-
-  /* lista de usuarios */
-  .user-sidebar {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    z-index: 10;
-    transition: transform 0.3s ease;
-    transform: translateX(0);
+  /* --- HEADER --- */
+  .chat-header-mobile {
+    display: flex;
+    align-items: center;
+    background: var(--color-primary);
+    color: white;
+    padding: 10px;
   }
-
-  .user-sidebar.hide {
-    transform: translateX(-100%);
-  }
-
 
   .back-btn {
     background: none;
@@ -264,4 +282,14 @@
     margin-right: 12px;
     cursor: pointer;
   }
+
+  .header {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+} 

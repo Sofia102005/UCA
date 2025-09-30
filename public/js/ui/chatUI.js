@@ -14,7 +14,7 @@ const chatUserName = document.getElementById("chatUserName");
 const sidebar = document.getElementById("userSidebar");
 const userList = document.getElementById("userList");
 const messagesDiv = document.getElementById("messages");
-const chatHeader = document.getElementById("chat-header");
+const chatHeader = document.getElementById("chatHeader");
 
 let selectedUser = null;
 const chats = {}; 
@@ -120,15 +120,22 @@ function openChat(user) {
   selectedUser = user;
   
   if (chatUserName) chatUserName.textContent = user.name;
-  // mostrar chat (en móvil oculta sidebar)
   if (chatMain) chatMain.classList.add("active");
+  if (chatHeader) chatHeader.classList.add("active");
   if (chatForm) chatForm.classList.add("active");
   if (sidebar) sidebar.classList.remove("hide");
+  
+
+  //chat
+  userSidebar.classList.add("hide");
+  chatMain.classList.add("active");
+  chatForm.classList.add("active");
+  chatHeader.classList.add("active");
 
   renderMessages(user.name);
 }
 
-// botón atrás (móvil)
+// botón atrás 
 if (backToUsers) {
   backToUsers.addEventListener("click", () => {
     selectedUser = null;
@@ -136,6 +143,14 @@ if (backToUsers) {
     if (sidebar) sidebar.classList.remove("hide");
     if (chatMain) chatMain.classList.remove("active");
     if (chatForm) chatForm.classList.remove("active");
+    if (chatHeader) chatHeader.classList.remove("active");
+
+
+    //chat
+    userSidebar.classList.remove("hide");
+    chatMain.classList.remove("active");
+    chatForm.classList.remove("active");
+    chatHeader.classList.remove("active");
 
     messagesDiv.innerHTML = "";
 

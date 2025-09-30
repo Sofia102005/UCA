@@ -119,7 +119,7 @@
   height: 100%;
   background: var(--color-background);
   overflow-y: auto;
-  padding: var(--spacing-lg);
+  padding: 1px;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
