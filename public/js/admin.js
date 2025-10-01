@@ -113,7 +113,7 @@ function openModal(user, imgSrc) {
       <select id="rolSelect">
         <option value="Monitor" ${user.rol === 'Monitor' ? 'selected' : ''}>Monitor</option>
         <option value="admin" ${user.rol === 'Admin' ? 'selected' : ''}>Admin</option>
-        <option value="user" ${user.rol === 'Estudiante' ? 'selected' : ''}>Estudiante</option>
+        <option value="Estudiante" ${user.rol === 'Estudiante' ? 'selected' : ''}>Estudiante</option>
       </select>
 
       <label>Imagen URL:</label>
