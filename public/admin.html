@@ -24,7 +24,16 @@
              <button id="btn-primary" class="btn-primary" >Cerrar Sesion </button>
         </div>
     </header>
+    <div id="filtroUser" class="filtro-user">
+        <select id="rolFilter">
+            <option value="all">Todos</option>
+            <option value="Monitor">Monitor</option>
+            <option value="Admin">Admin</option>
+            <option value="Estudiante">Estudiante</option>
+        </select>
 
+        <input type="text" id="nameFilter" placeholder="Buscar por nombre...">
+    </div>
     <div id="monitorContainer" class="monitor-grid"></div>
 
     <!-- Modal oculto de editar el monitor -->

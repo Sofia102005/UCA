@@ -377,6 +377,7 @@ footer {
     border: none;
     border-radius: var(--radius-sm);
     font-size: var(--font-size-md);
+    padding: var(--spacing-md);
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;

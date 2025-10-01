@@ -8,12 +8,15 @@ const monitorModal = document.getElementById("monitorModal");
 const createUserModal = document.getElementById("createUserModal");
 const logout = document.getElementById("btn-primary");
 
+const rolFilter = document.getElementById("rolFilter");
+const nameFilter = document.getElementById("nameFilter");
+
+let allUsers = []; // guardamos todos los usuarios
+
+
 // Verificar usuario
   const user = JSON.parse(localStorage.getItem("user"));
   if (!user) redirectToLogin();
-
-
-
 
 document.getElementById("openCreateModal").addEventListener("click", () => {
   openCreateUserModal();
@@ -22,20 +25,49 @@ document.getElementById("openCreateModal").addEventListener("click", () => {
 async function loadMonitor() {
   try {
     const data = await getUsers();
-    const users = Array.isArray(data) ? data : Object.values(data);
+    allUsers = Array.isArray(data) ? data : Object.values(data);
 
-    const monitors = users.filter(u => u.rol && u.rol.toLowerCase() === 'monitor');
 
-    if (!monitors.length) {
-      monitorContainer.innerHTML = "<p>No hay monitores para mostrar.</p>";
+    if (!allUsers.length) {
+      userContainer.innerHTML = "<p>No hay usuarios para mostrar.</p>";
       return;
     }
-    renderUser(monitors);
+
+    rolFilter.value = "all";
+    nameFilter.value = "";
+    applyFilters();
+
   } catch (err) {
-    console.error("Error cargando monitores:", err);
-    monitorContainer.innerHTML = `<p>Error: ${err.message}</p>`;
+    console.error("Error cargando usuarios:", err);
+    userContainer.innerHTML = `<p>Error: ${err.message}</p>`;
   }
 }
+
+function applyFilters() {
+
+  let filteredUsers = [...allUsers];
+
+  // Filtro por rol
+  const selectedRol = rolFilter.value;
+  if (selectedRol !== "all") {
+    filteredUsers = filteredUsers.filter(user => user.rol === selectedRol);
+  }
+
+  // Filtro por nombre
+  const nameQuery = nameFilter.value.toLowerCase().trim();
+  if (nameQuery) {
+    filteredUsers = filteredUsers.filter(user =>
+      user.name.toLowerCase().includes(nameQuery)
+    );
+  }
+
+  renderUser(filteredUsers);
+}
+
+
+rolFilter.addEventListener("change", applyFilters);
+nameFilter.addEventListener("input", applyFilters);
+
 
 function renderUser(users) {
   monitorModal.hidden = true;
@@ -83,7 +115,13 @@ function openModal(user, imgSrc) {
         <option value="admin" ${user.rol === 'Admin' ? 'selected' : ''}>Admin</option>
         <option value="user" ${user.rol === 'Estudiante' ? 'selected' : ''}>Estudiante</option>
       </select>
-      
+
+      <label>Imagen URL:</label>
+      <input type="text" id="imgInput" value="${user.img}">
+
+      <label>Contraseña:</label>
+      <input type="text" id="passwordInput" value="${user.password}">
+
       <div class="modal-buttons">
       <button type="button" id="closeButton">Cerrar</button>
       <button type="button" id="saveButton">Guardar</button>

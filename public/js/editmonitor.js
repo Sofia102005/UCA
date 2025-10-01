@@ -36,6 +36,7 @@ form.addEventListener("submit", async (e) => {
     const email = form.querySelector("#email").value.trim();
     const rol = form.querySelector("#rol").value;
     const password = form.querySelector("#password").value;
+    const img = form.querySelector("#img").value;
 
     if (!name) {
         alert("El campo nombre es obligatorio");
@@ -54,10 +55,10 @@ form.addEventListener("submit", async (e) => {
 
     try {
         if (editingId) {
-            await updateUser(editingId, { name, email, rol, password});
+            await updateUser(editingId, {name, email, rol, password,img });
             editingId = null;
         } else {
-            await createUser({  name, email, rol, password});
+            await createUser({name, email, rol, password, img});
         }
 
         resetForm(form, submitBtn);
