@@ -140,12 +140,16 @@ function openModal(user, imgSrc) {
     const newName = document.getElementById("nameInput").value;
     const newEmail = document.getElementById("emailInput").value;
     const newRol = document.getElementById("rolSelect").value;
+    const newpass = document.getElementById("passwordInput").value;
+    const newImg = document.getElementById("imgInput").value;
 
     try {
       await updateUser(user.id, {
         name: newName,
         email: newEmail,
-        rol: newRol
+        rol: newRol,
+        password: newpass,
+        img: newImg
       });
       alert("Monitor actualizado correctamente");
       monitorModal.hidden = true;

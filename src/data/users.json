@@ -10,9 +10,9 @@
   {
     "id": 2,
     "name": "pepito perez",
-    "password": "abcd",
+    "password": "abcde",
     "email": "user@chat.com",
-    "rol": "Estudiante",
+    "rol": "Monitor",
     "img": "https://i.pravatar.cc/150?img=2"
   },
   {
