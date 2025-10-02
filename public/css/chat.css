@@ -199,10 +199,7 @@
     border-top: 1px solid #ddd;
     box-sizing: border-box;
   }
-   .chat-input {
-    width: 100%;
-  }
-
+  
   .chat-main.active, .chat-form.active, #chatHeader.active {
     display: flex;
   }

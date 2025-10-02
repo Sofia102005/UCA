@@ -36,7 +36,7 @@
     "name": "Rosalba",
     "password": "abcd",
     "email": "Rosa@blabla.com",
-    "rol": "admin",
+    "rol": "Monitor",
     "img": "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
   },
   {
@@ -68,7 +68,7 @@
     "name": "Admin2",
     "password": "123456",
     "email": "admin@chat.com",
-    "rol": "admin",
+    "rol": "Admin",
     "img": "https://i.pravatar.cc/150?img=1"
   },
   {
@@ -76,7 +76,7 @@
     "name": "Yukioh",
     "password": "1234",
     "email": "yuki@user.com",
-    "rol": "user",
+    "rol": "Estudiante",
     "img": "https://achirou.com/pentesting-web-introduccion-a-inyeccion-html/"
   }
 ]

@@ -63,6 +63,7 @@ function handleUsersRoutes(req, res) {
 
         // PUT /api/users/:id
         if (method === "PUT" && parts.length === 3 && id) {
+
             let body = "";
             req.on("data", chunk => (body += chunk));
             req.on("end", () => {
@@ -91,6 +92,7 @@ function handleUsersRoutes(req, res) {
         if (method === "DELETE" && parts.length === 3 && id) {
         const users = getUsers();
         const newUsers = users.filter(u => u.id !== id);
+
         if (newUsers.length === users.length) {
             res.writeHead(404);
             res.end(JSON.stringify({ error: "Usuario no encontrado" }));

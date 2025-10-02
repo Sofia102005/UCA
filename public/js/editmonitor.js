@@ -1,5 +1,5 @@
 import { getUsers, getUser, createUser, updateUser} from "./services/api.js";
-import { renderUsers, resetForm, fillForm } from "./ui/ui.js";
+import { renderUsers, resetForm, fillForm } from "./ui/adminUI.js";
 
 const form = document.getElementById("userForm");
 const tableBody = document.getElementById("usersTable");

@@ -33,8 +33,7 @@ async function loadMonitor() {
       return;
     }
 
-    rolFilter.value = "all";
-    nameFilter.value = "";
+
     applyFilters();
 
   } catch (err) {
@@ -48,10 +47,10 @@ function applyFilters() {
   let filteredUsers = [...allUsers];
 
   // Filtro por rol
-  const selectedRol = rolFilter.value;
-  if (selectedRol !== "all") {
-    filteredUsers = filteredUsers.filter(user => user.rol === selectedRol);
-  }
+ const selectedRol = rolFilter.value.toLowerCase();
+if (selectedRol !== "all") {
+  filteredUsers = filteredUsers.filter(user => user.rol.toLowerCase() === selectedRol);
+}
 
   // Filtro por nombre
   const nameQuery = nameFilter.value.toLowerCase().trim();
@@ -77,26 +76,37 @@ function renderUser(users) {
     const imgSrc = user.img;
     const div = document.createElement("div");
     div.classList.add("user");
+
+    // Botón de acción según id
+    let buttonHTML;
+    if (user.id === 1) {
+      buttonHTML = `<button type="button" class="detailsButton" disabled style="background:#ccc;cursor:not-allowed;">No editable</button>`;
+    } else {
+      buttonHTML = `<button type="button" class="detailsButton" data-id="${user.id}">Editar</button>`;
+    }
     div.innerHTML = `
       <img src="${imgSrc}">
       <div class="user-body">
         <h2>${user.name}</h2>
         <p><strong>Correo:</strong> ${user.email}</p>
         <p><strong>Rol:</strong> ${user.rol}</p>
-        <button type="button" class="detailsButton" id="${user.id}">Editar</button>
+        ${buttonHTML}
       </div>
     `;
     monitorContainer.appendChild(div);
 
-    div.querySelector(".detailsButton").addEventListener("click", () => {
-      openModal(user, imgSrc);
-    });
+    // Evento de click solo si no es admin principal
+    if (user.id !== 1) {
+      div.querySelector(".detailsButton").addEventListener("click", () => {
+        openModal(user, imgSrc);
+      });
+    }
   });
 }
 
 function openModal(user, imgSrc) {
+  
   monitorModal.hidden = false;
-
   monitorModal.innerHTML = `
     <div class="modal" id="editModal">
     <div class="modal-content">
@@ -112,7 +122,7 @@ function openModal(user, imgSrc) {
       <label>Rol:</label>
       <select id="rolSelect">
         <option value="Monitor" ${user.rol === 'Monitor' ? 'selected' : ''}>Monitor</option>
-        <option value="admin" ${user.rol === 'Admin' ? 'selected' : ''}>Admin</option>
+        <option value="Admin" ${user.rol === 'Admin' ? 'selected' : ''}>Admin</option>
         <option value="Estudiante" ${user.rol === 'Estudiante' ? 'selected' : ''}>Estudiante</option>
       </select>
 

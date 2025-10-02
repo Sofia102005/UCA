@@ -32,7 +32,9 @@
     --spacing-xl: 20px;
 }
 
-
+#Logo_UCA {
+  mix-blend-mode: multiply; /* o darken */
+}
 /* GLOBAL */
 body {
     font-family: 'Inter', sans-serif;
@@ -70,8 +72,8 @@ body {
 
 /* Logo cuadrado blanco */
 .Logo {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 60px;
     background-color: var(--color-white);
     display: flex;
     align-items: center;
@@ -80,8 +82,8 @@ body {
 }
 
 .Logo img {
-    width: 35px;
-    height: 35px;
+    width: 52px;
+    height: 100px;
     object-fit: contain;
 }
 
@@ -388,9 +390,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 16px 20px;
+    padding: 16px 8px;
     color: var(--color-white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: small;
+    font-family: Arial, sans-serif;;
 }
 
 }
